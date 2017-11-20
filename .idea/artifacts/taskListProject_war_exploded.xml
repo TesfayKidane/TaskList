@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="taskListProject" />
+          <element id="module-output" name="TaskList" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.2" />
@@ -13,7 +13,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/taskListProject-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="taskListProject/web/Web" />
+      <element id="javaee-facet-resources" facet="TaskList/web/Web" />
     </root>
   </artifact>
 </component>

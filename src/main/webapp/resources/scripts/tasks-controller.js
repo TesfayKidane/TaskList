@@ -45,11 +45,11 @@ tasksController = function() {
 	function renderTable() {
 		$.each($(taskPage).find('#tblTasks tbody tr'), function(idx, row) {
 			var due = Date.parse($(row).find('[datetime]').text());
-			if (due.compareTo(Date.today()) < 0) {
-				$(row).addClass("overdue");
-			} else if (due.compareTo((2).days().fromNow()) <= 0) {
-				$(row).addClass("warning");
-			}
+			//if (due.compareTo(Date.today()) < 0) {
+			//	$(row).addClass("overdue");
+			//} else if (due.compareTo((2).days().fromNow()) <= 0) {
+			//	$(row).addClass("warning");
+			//}
 		});
 	}
 	
@@ -151,9 +151,9 @@ tasksController = function() {
 		loadTasks : function() {
 			$(taskPage).find('#tblTasks tbody').empty();
 			storageEngine.findAll('task', function(tasks) {
-				tasks.sort(function(o1, o2) {
-					return Date.parse(o1.requiredBy).compareTo(Date.parse(o2.requiredBy));
-				});
+				//tasks.sort(function(o1, o2) {
+				//	return Date.parse(o1.requiredBy).compareTo(Date.parse(o2.requiredBy));
+				//});
 				$.each(tasks, function(index, task) {
 					if (!task.complete) {
 						task.complete = false;
